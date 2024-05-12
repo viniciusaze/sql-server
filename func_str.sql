@@ -24,3 +24,14 @@ SELECT NOME_DO_PRODUTO, LEFT(NOME_DO_PRODUTO, 3) AS TER_PRIMEIROS_CHAR FROM TABE
 
 -- SUBSTITUINDO CHAR
 SELECT TAMANHO, REPLACE(REPLACE(TAMANHO, 'Litros', 'L'),'Litro', 'L') AS TAMANHO_MODIFICADO FROM TABELA_DE_PRODUTOS;
+
+-- EXERCÍCIO
+-- 1 NOME DE CADA CLIENTE
+
+-- Primeiro, vamos localizar o primeiro espaço do nome. 
+-- Sua posição. Para isso, basta executar a função CHARINDEX
+SELECT NOME, CHARINDEX(' ', NOME, 1) FROM TABELA_DE_CLIENTES;
+
+-- Usando a função SUBSTRING podemos buscar parte do texto que compõe o nome completo 
+-- buscando da posição 1 a posição do primeiro espaço.
+SELECT NOME, SUBSTRING(NOME, 1, CHARINDEX(' ', NOME, 1)) FROM TABELA_DE_CLIENTES;
