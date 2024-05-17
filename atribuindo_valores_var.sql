@@ -4,6 +4,7 @@ DECLARE @CPF VARCHAR(50);
 DECLARE @NOME VARCHAR(100);
 DECLARE @DATA_NASCIMENTO DATE;
 DECLARE @IDADE INT;
+DECLARE @SAIDA VARCHAR(500);
 
 SET @CPF = '19290992743'
 
@@ -38,4 +39,8 @@ PRINT @NUMNOTAS
 --SELECT NOME, CHARINDEX(' ', NOME), SUBSTRING(NOME, 1, CHARINDEX(' ', NOME)-1) 
 --FROM [TABELA DE CLIENTES];
 
-PRINT 'O primeiro nome do cliente ' + @NOME + ', cujo CPF é ' + @CPF + ', corresponde a ' + SUBSTRING(@NOME, 1, CHARINDEX(' ', @NOME)-1)
+--PRINT 'O primeiro nome do cliente ' + @NOME + ', cujo CPF é ' + @CPF + ', corresponde a ' + SUBSTRING(@NOME, 1, CHARINDEX(' ', @NOME)-1)
+
+SET @SAIDA = 'O primeiro nome do cliente ' + @NOME + ', cujo CPF é ' + @CPF + ', corresponde a ' + SUBSTRING(@NOME, 1, CHARINDEX(' ', @NOME)-1)
+
+PRINT @SAIDA
