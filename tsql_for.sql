@@ -1,0 +1,21 @@
+-- FOR (SIMULADO COM WHILE)
+
+DECLARE @I INT;
+SET @I = 1;
+
+WHILE @I <= 100
+BEGIN
+	PRINT @I;
+	SET @I = @I +1;
+END;
+
+-- EXERCÍCIO
+
+DECLARE @N INT;
+SET @N = 100;
+
+WHILE @N >= 1
+BEGIN
+	PRINT @N;
+	SET @N = @N - 1;
+END;
